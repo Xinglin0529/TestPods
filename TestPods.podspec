@@ -1,42 +1,42 @@
 #
-# Be sure to run `pod lib lint TestPods.podspec' to ensure this is a
-# valid spec before submitting.
+#  Be sure to run `pod spec lint Testpods.podspec' to ensure this is a
+#  valid spec and to remove all comments including this before submitting the spec.
 #
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
+#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'TestPods'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of TestPods.'
+  s.name         = "TestPods"
+  s.version      = "0.1.0"
+  s.summary      = "Test Pods."
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.description  = 'Just for testing private pods.'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.homepage     = "https://github.com/Xinglin0529/TestPods"
 
-  s.homepage         = 'https://github.com/Xinglin0529/TestPods'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Xinglin0529' => 'xudongdong@zhongan.com' }
-  s.source           = { :git => 'https://github.com/Xinglin0529/TestPods.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.license      = 'MIT'
 
-  s.ios.deployment_target = '8.0'
+  s.author       = { "Xinglin0529" => "email@address.com" }
 
-  s.source_files = 'TestPods/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'TestPods' => ['TestPods/Assets/*.png']
-  # }
+  s.platform     = :ios, "8.0"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source       = { :git => "https://github.com/Xinglin0529/TestPods.git", :tag => "0.1.0" }
+
+  s.source_files = "TestPods/Classes", "Classes/**/*.{h,m}"
+
+  s.public_header_files = "TestPods/Classes/**/*.h"
+
+  # s.framework  = "SomeFramework"
+  # s.frameworks = "SomeFramework", "AnotherFramework"
+
+  # s.library    = "iconv"
+  # s.libraries  = "iconv", "xml2"
+
+
+  s.requires_arc = true
+
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  # s.dependency "JSONKit", "~> 1.4"
+
 end
